@@ -44,7 +44,7 @@ function love.load()
 	_navi = require 'arc'
 
 	-- create test message	
-	msg1 = _navi:new("Huhu! Mein Name ist Herorat.",{name = "Herorat", wbox = love.graphics.getWidth()/scale, nrows = 5})
+	msg1 = _navi:new("Huhu! Mein Name ist Herorat und ich wurde gerade mit GitHub synchronisiert.",{name = "Herorat", wbox = love.graphics.getWidth()/scale, nrows = 5})
 
 	layer = map("Objects")
 	layer:toCustomLayer(convertobject)
