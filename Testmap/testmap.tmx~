@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Testtiles" tilewidth="32" tileheight="32">
+  <image source="Testtiles.png" width="192" height="192"/>
+ </tileset>
+ <tileset firstgid="37" name="Meta" tilewidth="32" tileheight="32">
+  <image source="../Testtileset/meta.png" width="128" height="128"/>
+  <tile id="0">
+   <properties>
+    <property name="down" value="true"/>
+    <property name="obstacle" value="true"/>
+    <property name="up" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="obstacle" value="true"/>
+    <property name="up" value="true"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="down" value="true"/>
+    <property name="obstacle" value="true"/>
+    <property name="right" value="true"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="down" value="true"/>
+    <property name="left" value="true"/>
+    <property name="obstacle" value="true"/>
+    <property name="right" value="true"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="down" value="true"/>
+    <property name="obstacle" value="true"/>
+    <property name="right" value="true"/>
+    <property name="up" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="obstacle" value="true"/>
+    <property name="right" value="true"/>
+    <property name="up" value="true"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="obstacle" value="true"/>
+    <property name="right" value="true"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="left" value="true"/>
+    <property name="obstacle" value="true"/>
+    <property name="right" value="true"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="down" value="true"/>
+    <property name="left" value="true"/>
+    <property name="obstacle" value="true"/>
+    <property name="up" value="true"/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="left" value="true"/>
+    <property name="obstacle" value="true"/>
+    <property name="up" value="true"/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="left" value="true"/>
+    <property name="obstacle" value="true"/>
+    <property name="right" value="true"/>
+    <property name="up" value="true"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="down" value="true"/>
+    <property name="left" value="true"/>
+    <property name="obstacle" value="true"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="left" value="true"/>
+    <property name="obstacle" value="true"/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="down" value="true"/>
+    <property name="obstacle" value="true"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="down" value="true"/>
+    <property name="left" value="true"/>
+    <property name="obstacle" value="true"/>
+    <property name="right" value="true"/>
+    <property name="up" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Ground" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYKA+EAZiESpgGJAEYmUKsfSoeaPmjZo3at4INU+ZgTYAACJXKhQ=
+  </data>
+ </layer>
+ <layer name="Transparent Ground" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFAwE4BtoBIwRw4MCDxbyBAGJALA7EslQyT4aKZg0lQM+4B8WZIBIG8hcAw30BMNwT6OQErAAArGkDNA==
+  </data>
+ </layer>
+ <layer name="Transparent" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFhAAjEDMBMTOVzGOH0pxUMo8XiPmAmJ9K5g0UgIUzDEsgsckJe3Y8cuSEPTnmcQExNxDzYJGDxRs2PNTjcrAB5LRFjXyMnBaokY9haUGOAXfc40tLAwUACeQBmQ==
+  </data>
+ </layer>
+ <layer name="Foreground" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUwAALELMCMdtAO2QUDHlArbQkD8QKFGJFCt2ACwAAVS8CXw==
+  </data>
+ </layer>
+ <layer name="Meta" width="20" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJzFlOEKgCAMhO9pEipCe/+HS0FhzmnqpA7uX3xe2ykA3IscdHhf3pvSu7eLPIcx8Uwp1wyP/k/KpOXZmM0s4AH53Og5szxJEk/avzT7Hp7UG6Dswwiv53sump/zLOrdNxVeq89vd6ClL/b7J4/PV8Pj3Qq7OJW81IUgU+H13gWg7LzUO9qN0beZ9lP7NtOsD1RRJd0=
+  </data>
+ </layer>
+</map>
