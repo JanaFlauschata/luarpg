@@ -3,23 +3,21 @@ NPC = {}
 
 require("AnAL")
 
-local speed = 50
 local animSpeed = 0.3
 local animSpeedWait = 1
 
 -- constructor
-function NPC:new(x, y, colour, messages, talk)
-	-- TODO not use messages
-	dofile("npcs/"..messages..".lua")
+function NPC:new(x, y, npc)
+	dofile("npcs/"..npc..".lua")
 
 	local object = {
 	x = x + 16,
 	y = y + 16,
-	speed = speed,
 	direction = "none",
-	colour = colour or "fawnhooded",
-	messages = messages,
-	talk = testnpctalk,
+	speed = npcparams.speed,
+	colour = npcparams.colour,
+	talk = function() return talk() end,
+	message = nil,
 	}
 	setmetatable(object, { __index = NPC })
 
@@ -65,8 +63,7 @@ end
 function NPC:keypressed(key)
 	local nosex, nosey = herorat:getNoseCoordinates()
 	if (key == "return" and nosex > self.x - 32 and nosex < self.x + 32 and nosey > self.y - 32 and nosey < self.y + 32) then
-		loadstring(self.talk)
-		--_G[self.talk]()
+		message = self.talk()
 	end
 end
 
@@ -96,6 +93,18 @@ function NPC:draw()
 		self.anim.up:draw(self.x-15, self.y-15)
 	elseif self.direction == "none" then
 		self.anim.wait:draw(self.x-15,self.y-15)
+	end
+end
+
+function NPC:drawMessage()
+	if message ~= nil then	
+		msg = _navi:new(message) --,{name = "TestNPC", wbox = love.graphics.getWidth()/scale, nrows = 5})
+		--msg = _navi:new(message)
+		--msg:play(0,love.graphics.getHeight()/scale-80)
+		msg:play(self.x,self.y)
+		if msg:is_over() then
+			message = nil
+		end
 	end
 end
 

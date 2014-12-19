@@ -20,7 +20,7 @@ end
 -- create object conversion function
 local function convertobject(objectold)	
 	if (objectold.type == "NPC") then
-		object = NPC:new(objectold.x,objectold.y,objectold.properties.colour,objectold.properties.messages,objectold.properties.talk)
+		object = NPC:new(objectold.x,objectold.y,objectold.name)
 	end
 	if (objectold.type == "transfer") then
 		object = Transfer:new(objectold.x,objectold.y,objectold.width,objectold.height,objectold.properties.destination,objectold.properties.newx,objectold.properties.newy)
@@ -111,7 +111,7 @@ function love.draw()
 	map:setDrawRange(0,0,love.graphics.getWidth(),love.graphics.getHeight())
 	map:autoDrawRange(tx, ty, scale, padding)
 
-	-- draw map
+	-- draw map (and objects on the map)
 	map:draw()
 
 	-- draw rat
@@ -127,6 +127,16 @@ function love.draw()
 	love.graphics.scale(scale)
 
 	-- messaging
-	msg1:play(0,love.graphics.getHeight()/scale-80)
+	--if not msg1:is_over() then
+		msg1:play(0,love.graphics.getHeight()/scale-80)
+	--end
+
+	-- draw object messages
+	for k,object in pairs(layer.objects) do
+		if object.drawMessage then
+			object:drawMessage()
+		end
+	end
+
 	arc.clear_key()
 end

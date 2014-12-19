@@ -1,5 +1,8 @@
-testnpc = {}
+npcparams = {
+colour = "fawnhooded",
+speed = 50,
+}
 
-function testnpctalk()
-	print("Huhu!!!")
+function talk()
+	return "Huhu!!!"
 end
